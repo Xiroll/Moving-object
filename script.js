@@ -1,8 +1,3 @@
-
-
-
-
-
 window.addEventListener('mousemove', nutterbutter);
 // function nutterbutter(){
 // 	var _el = document.getElementById('woo');
@@ -14,16 +9,20 @@ window.addEventListener('mousemove', nutterbutter);
 
 
 var _el = document.getElementById('woo');
-_el.addEventListener('dblclick', function(){
-"use strict";	window.addEventListener('mousemove', nutterbutter);
-	_el.addEventListener('dblclick', removeNutter);
+_el.addEventListener('dblclick', function () {
+        "use strict";
+        window.addEventListener('mousemove', nutterbutter);
+        _el.addEventListener('dblclick', removeNutter);
 });
 
-        function removeNutter(){
-	"use strict"; window.removeEventListener('mousemove', nutterbutter);
-	         _el.removeEventListener('dblclick', removeNutter);
-        }
-        function nutterbutter(){
-         "use strict";	_el.style.top = event.clientY + "px";
-        	_el.style.left = event.clientX + "px";
-        }
+function removeNutter() {
+        "use strict";
+        window.removeEventListener('mousemove', nutterbutter);
+        _el.removeEventListener('dblclick', removeNutter);
+}
+
+function nutterbutter() {
+        "use strict";
+        _el.style.top = event.clientY + "px";
+        _el.style.left = event.clientX + "px";
+}
